@@ -19,6 +19,8 @@ import {
 import { Input } from './input';
 import { Button } from './button';
 import { ScrollArea, ScrollBar } from './scroll-area';
+import { DataTableToolbar } from './data-table-toolbar';
+import { DataTablePagination } from './data-table-pagination';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -43,15 +45,16 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <Input
+      {/* <Input
         placeholder={`Search ${searchKey}...`}
         value={(table.getColumn(searchKey)?.getFilterValue() as string) ?? ''}
         onChange={(event) =>
           table.getColumn(searchKey)?.setFilterValue(event.target.value)
         }
         className="w-full md:max-w-sm"
-      />
-      <ScrollArea className="h-[calc(80vh-220px)] rounded-md border md:h-[calc(80dvh-200px)]">
+      /> */}
+      <DataTableToolbar table={table} searchKey={searchKey} />
+      <ScrollArea className="h-[calc(80vh-50px)] rounded-md border md:h-[calc(80dvh-50px)]">
         <Table className="relative">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -102,7 +105,8 @@ export function DataTable<TData, TValue>({
         </Table>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
-      <div className="flex items-center justify-end space-x-2 py-4">
+      <DataTablePagination table={table} />
+      {/* <div className="flex items-center justify-end space-x-2 py-0">
         <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{' '}
           {table.getFilteredRowModel().rows.length} row(s) selected.
@@ -125,7 +129,7 @@ export function DataTable<TData, TValue>({
             Next
           </Button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

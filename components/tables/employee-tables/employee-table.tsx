@@ -196,7 +196,7 @@ export function EmployeeTable<TData, TValue>({
         }
         className="w-full md:max-w-sm"
       />
-      <ScrollArea className="h-[calc(80vh-220px)] rounded-md border">
+      <ScrollArea className="h-[calc(80vh-150px)] rounded-md border">
         <Table className="relative">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -248,8 +248,8 @@ export function EmployeeTable<TData, TValue>({
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
 
-      <div className="flex flex-col items-center justify-end gap-2 space-x-2 py-4 sm:flex-row">
-        <div className="flex w-full items-center justify-between">
+      <div>
+        {/* <div className="flex w-full items-center justify-between">
           <div className="flex-1 text-sm text-muted-foreground">
             {table.getFilteredSelectedRowModel().rows.length} of{' '}
             {table.getFilteredRowModel().rows.length} row(s) selected.
@@ -280,8 +280,8 @@ export function EmployeeTable<TData, TValue>({
               </Select>
             </div>
           </div>
-        </div>
-        <div className="flex w-full items-center justify-between gap-2 sm:justify-end">
+        </div> */}
+        {/* <div className="flex w-full items-center justify-between gap-2 sm:justify-end">
           <div className="flex w-[100px] items-center justify-center text-sm font-medium">
             Page {table.getState().pagination.pageIndex + 1} of{' '}
             {table.getPageCount()}
@@ -324,7 +324,7 @@ export function EmployeeTable<TData, TValue>({
               <DoubleArrowRightIcon className="h-4 w-4" aria-hidden="true" />
             </Button>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

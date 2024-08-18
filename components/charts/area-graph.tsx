@@ -17,6 +17,7 @@ import {
   ChartTooltip,
   ChartTooltipContent
 } from '@/components/ui/chart';
+import { log } from 'console';
 const chartData = [
   { month: 'January', desktop: 186, mobile: 80 },
   { month: 'February', desktop: 305, mobile: 200 },
@@ -54,6 +55,7 @@ export function AreaGraph() {
           <AreaChart
             accessibilityLayer
             data={chartData}
+            onClick={(state) => console.log(state)}
             margin={{
               left: 12,
               right: 12

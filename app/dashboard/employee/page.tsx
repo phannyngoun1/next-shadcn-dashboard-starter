@@ -41,10 +41,10 @@ export default async function page({ searchParams }: paramsProps) {
         <Breadcrumbs items={breadcrumbItems} />
 
         <div className="flex items-start justify-between">
-          <Heading
+          {/* <Heading
             title={`Employee (${totalUsers})`}
             description="Manage employees (Server side table functionalities.)"
-          />
+          /> */}
 
           <Link
             href={'/dashboard/employee/new'}

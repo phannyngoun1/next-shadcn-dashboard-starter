@@ -142,6 +142,12 @@ export const navItems: NavItem[] = [
     label: 'kanban'
   },
   {
+    title: 'Seat Designer',
+    href: '/dashboard/seat-designer',
+    icon: 'kanban',
+    label: 'Seat Designer'
+  },
+  {
     title: 'Login',
     href: '/',
     icon: 'login',
