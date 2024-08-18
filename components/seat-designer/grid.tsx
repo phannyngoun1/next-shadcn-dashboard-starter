@@ -9,8 +9,8 @@ interface GridCellProps {
 
 const GridCell: React.FC<GridCellProps> = ({ id, onDrop, children }) => {
   const { isOver, setNodeRef } = useDroppable({
-    id: id.toString(),
-    onDrop: () => onDrop(id)
+    id: id.toString()
+    // onDrop: () => onDrop(id)
   });
 
   const style = {
