@@ -7,7 +7,7 @@ import { statuses } from '@/app/dashboard/user/data/data';
 import { Button } from './button';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { DataTableViewOptions } from './data-table-view-options';
-import { Plus } from 'lucide-react';
+import { Plus, PlusCircle } from 'lucide-react';
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -50,8 +50,11 @@ export function DataTableToolbar<TData>({
         )}
       </div>
       <div className="flex space-x-2">
-        <Button variant={'default'} className="h-8 px-2 lg:px-3">
-          <Plus className="mr-2 h-4 w-4" /> Add
+        <Button size="sm" className="h-7 gap-1">
+          <PlusCircle className="h-3.5 w-3.5" />
+          <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+            Add User
+          </span>
         </Button>
         <DataTableViewOptions table={table} />
       </div>
