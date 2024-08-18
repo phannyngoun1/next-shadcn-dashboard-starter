@@ -4,5 +4,5 @@ export interface GridProps {
   defaultColumnWidth?: string | number;
   containerClass?: string;
   gridClass?: string;
-  rowClass?: ((row: SupaRow) => string | undefined) | undefined;
+  // rowClass?: ((row: SupaRow) => string | undefined) | undefined;
 }
